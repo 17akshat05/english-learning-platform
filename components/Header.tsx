@@ -20,7 +20,7 @@ const Header = () => {
     // Simulate login - in real app, this would call your backend
     const mockUser = {
       id: '1',
-      name: 'John Doe',
+      name: email.split('@')[0], // Use email prefix as name
       email: email
     }
     setUser(mockUser)

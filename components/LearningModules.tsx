@@ -98,8 +98,8 @@ const LearningModules = () => {
               id: 3,
               type: 'translation',
               question: "Translate: 'My name is Maria'",
-              correctAnswer: "Mi nombre es Maria",
-              explanation: "This is how you introduce yourself in Spanish."
+              correctAnswer: "My name is Maria",
+              explanation: "This is a simple introduction phrase."
             }
           ],
           completed: false
@@ -108,8 +108,8 @@ const LearningModules = () => {
     },
     {
       id: 2,
-      title: "Everyday Conversations",
-      description: "Master common daily conversations including shopping, dining, and travel.",
+      title: "Daily Conversations",
+      description: "Master everyday conversations about weather, food, and daily activities.",
       level: "beginner",
       duration: "45 min",
       completed: false,
@@ -119,22 +119,22 @@ const LearningModules = () => {
       lessons: [
         {
           id: 3,
-          title: "Shopping",
-          words: ["Buy", "Price", "Cost", "Cheap", "Expensive", "Discount", "Sale", "Cash", "Card"],
+          title: "Weather Talk",
+          words: ["Sunny", "Rainy", "Cold", "Hot", "Windy", "Cloudy", "Temperature", "Forecast"],
           sentences: [
-            "How much does this cost?",
-            "That's too expensive for me.",
-            "Do you accept credit cards?",
-            "Is there a discount?",
-            "I'll take it!"
+            "It's a beautiful sunny day!",
+            "The weather is cold today.",
+            "What's the temperature?",
+            "It looks like it will rain."
           ],
           exercises: [
             {
               id: 4,
-              type: 'fill-blank',
-              question: "Complete: 'How much does this ____?'",
-              correctAnswer: "cost",
-              explanation: "Cost is the verb used to ask about price."
+              type: 'multiple-choice',
+              question: "What do you say when it's raining?",
+              options: ["It's sunny", "It's raining", "It's cold", "It's hot"],
+              correctAnswer: "It's raining",
+              explanation: "Use 'It's raining' to describe rainy weather."
             }
           ],
           completed: false
@@ -143,39 +143,135 @@ const LearningModules = () => {
     },
     {
       id: 3,
-      title: "Grammar Fundamentals",
-      description: "Build a strong foundation with essential English grammar rules and structures.",
+      title: "Business English",
+      description: "Professional vocabulary and phrases for workplace communication.",
       level: "intermediate",
       duration: "60 min",
       completed: false,
       locked: false,
       rating: 4.9,
-      students: 2100,
+      students: 750,
       lessons: [
         {
           id: 4,
-          title: "Present Simple",
-          words: ["Work", "Live", "Study", "Like", "Love", "Hate", "Want", "Need", "Have"],
+          title: "Meetings",
+          words: ["Agenda", "Minutes", "Presentation", "Discussion", "Decision", "Action", "Follow-up", "Schedule"],
           sentences: [
-            "I work in an office.",
-            "She lives in New York.",
-            "They study English every day.",
-            "We like coffee.",
-            "He has a car."
+            "Let's start the meeting.",
+            "What's on the agenda today?",
+            "I'll send you the minutes.",
+            "We need to make a decision."
           ],
           exercises: [
             {
               id: 5,
+              type: 'fill-blank',
+              question: "Complete: 'Let's _____ the meeting.'",
+              correctAnswer: "start",
+              explanation: "Start is the correct verb for beginning a meeting."
+            }
+          ],
+          completed: false
+        }
+      ]
+    },
+    {
+      id: 4,
+      title: "Academic Writing",
+      description: "Advanced writing skills for academic and professional contexts.",
+      level: "advanced",
+      duration: "90 min",
+      completed: false,
+      locked: false,
+      rating: 4.6,
+      students: 420,
+      lessons: [
+        {
+          id: 5,
+          title: "Essay Structure",
+          words: ["Introduction", "Thesis", "Argument", "Evidence", "Conclusion", "Paragraph", "Topic", "Support"],
+          sentences: [
+            "The introduction should grab the reader's attention.",
+            "Your thesis statement is the main argument.",
+            "Each paragraph should support your thesis.",
+            "The conclusion summarizes your main points."
+          ],
+          exercises: [
+            {
+              id: 6,
               type: 'multiple-choice',
-              question: "Which sentence is correct?",
-              options: [
-                "I am work in an office",
-                "I work in an office",
-                "I working in an office",
-                "I works in an office"
-              ],
-              correctAnswer: "I work in an office",
-              explanation: "Present simple uses the base form of the verb."
+              question: "What comes first in an essay?",
+              options: ["Conclusion", "Body paragraphs", "Introduction", "Bibliography"],
+              correctAnswer: "Introduction",
+              explanation: "The introduction always comes first in an essay."
+            }
+          ],
+          completed: false
+        }
+      ]
+    },
+    {
+      id: 5,
+      title: "Travel English",
+      description: "Essential phrases and vocabulary for traveling and tourism.",
+      level: "intermediate",
+      duration: "40 min",
+      completed: false,
+      locked: false,
+      rating: 4.8,
+      students: 1100,
+      lessons: [
+        {
+          id: 6,
+          title: "At the Airport",
+          words: ["Passport", "Boarding", "Gate", "Flight", "Departure", "Arrival", "Luggage", "Check-in"],
+          sentences: [
+            "Where is the check-in counter?",
+            "What time does my flight depart?",
+            "I need to check my luggage.",
+            "Which gate is my flight?"
+          ],
+          exercises: [
+            {
+              id: 7,
+              type: 'translation',
+              question: "Translate: 'Where is the check-in counter?'",
+              correctAnswer: "Where is the check-in counter?",
+              explanation: "This is a common question at airports."
+            }
+          ],
+          completed: false
+        }
+      ]
+    },
+    {
+      id: 6,
+      title: "Advanced Grammar",
+      description: "Master complex grammar structures and advanced language patterns.",
+      level: "advanced",
+      duration: "75 min",
+      completed: false,
+      locked: false,
+      rating: 4.5,
+      students: 380,
+      lessons: [
+        {
+          id: 7,
+          title: "Conditional Sentences",
+          words: ["If", "Would", "Could", "Might", "Unless", "Provided", "Condition", "Result"],
+          sentences: [
+            "If I had money, I would travel.",
+            "Unless you study, you won't pass.",
+            "Provided that you arrive on time, we can start.",
+            "If it rains, we will stay inside."
+          ],
+          exercises: [
+            {
+              id: 8,
+              type: 'fill-blank',
+              question: "Complete: 'If I _____ rich, I would buy a house.'",
+              correctAnswer: "were",
+              explanation: "Use 'were' in hypothetical conditional sentences."
             }
           ],
           completed: false
