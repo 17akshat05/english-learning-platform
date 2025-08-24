@@ -8,17 +8,36 @@
   }
   
   body {
-    @apply bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-200;
+    @apply bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-200;
+  }
+
+  /* Improve dark theme text contrast */
+  h1, h2, h3, h4, h5, h6 {
+    @apply dark:text-white;
+  }
+
+  p {
+    @apply dark:text-gray-200;
+  }
+
+  /* Better dark theme input styling */
+  input, textarea, select {
+    @apply dark:bg-gray-800 dark:border-gray-600 dark:text-white dark:placeholder-gray-400;
+  }
+
+  /* Improve button contrast in dark mode */
+  button {
+    @apply dark:text-white;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+    @apply bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 shadow-sm hover:shadow-md;
   }
   
   .btn-secondary {
-    @apply bg-secondary-600 hover:bg-secondary-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+    @apply bg-secondary-600 hover:bg-secondary-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 shadow-sm hover:shadow-md;
   }
   
   .card {
@@ -26,11 +45,11 @@
   }
   
   .word-card {
-    @apply bg-gradient-to-br from-primary-50 to-secondary-50 dark:from-primary-900/20 dark:to-secondary-900/20 border border-primary-200 dark:border-primary-700 rounded-xl p-6 hover:shadow-lg transition-all duration-300;
+    @apply bg-gradient-to-br from-primary-50 to-secondary-50 dark:from-gray-800 dark:to-gray-700 border border-primary-200 dark:border-primary-600 rounded-xl p-6 hover:shadow-lg transition-all duration-300;
   }
   
   .speaking-area {
-    @apply bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 border-2 border-dashed border-blue-300 dark:border-blue-600 rounded-xl p-8 text-center;
+    @apply bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/30 dark:to-purple-900/30 border-2 border-dashed border-blue-300 dark:border-blue-500 rounded-xl p-8 text-center;
   }
   
   .progress-bar {
@@ -39,6 +58,37 @@
   
   .progress-fill {
     @apply bg-gradient-to-r from-primary-500 to-secondary-500 h-2.5 rounded-full transition-all duration-300;
+  }
+
+  /* Dark theme specific improvements */
+  .dark .text-gray-600 {
+    @apply text-gray-300;
+  }
+
+  .dark .text-gray-500 {
+    @apply text-gray-400;
+  }
+
+  .dark .bg-gray-100 {
+    @apply bg-gray-700;
+  }
+
+  .dark .bg-gray-50 {
+    @apply bg-gray-800;
+  }
+
+  /* Modal improvements for dark theme */
+  .dark .bg-white {
+    @apply bg-gray-800;
+  }
+
+  /* Form elements dark theme */
+  .dark input, .dark textarea {
+    @apply bg-gray-700 border-gray-600 text-white placeholder-gray-400;
+  }
+
+  .dark input:focus, .dark textarea:focus {
+    @apply border-primary-500 ring-primary-500;
   }
 }
 
@@ -49,5 +99,18 @@
   
   .animate-pulse-slow {
     animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  /* Dark theme text utilities */
+  .dark-text {
+    @apply dark:text-white;
+  }
+
+  .dark-text-secondary {
+    @apply dark:text-gray-300;
+  }
+
+  .dark-text-muted {
+    @apply dark:text-gray-400;
   }
 } 
